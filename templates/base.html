@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,6 +14,14 @@
             integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
             crossorigin="anonymous"
         />
+        <!-- <link
+            rel="stylesheet"
+            href="{% static 'styles/bootstrap_flatly.min.css' %}"
+        /> -->
+        <link
+            rel="stylesheet"
+            href="{% static 'styles/bootstrap_lux.min.css' %}"
+        />
         <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
         <script
             type="text/javascript"
@@ -23,6 +32,8 @@
     </head>
     <body>
         <header>
+            <!--  -->
+            {% include 'nav.html' %}
             <!--  -->
         </header>
         <div class="container">

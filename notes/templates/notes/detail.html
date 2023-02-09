@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 <!--  -->
+{% load notes_extras %}
+<!--  -->
 {% block content %}
 <!--  -->
 <h2>{{ note.title }}</h2>
-<h4>Entered by {{ note.author }} | {{ note.created }}</h4>
-<h4>Modified: {{ note.modified }}</h4>
 <br />
-<p>{{ note.body }}</p>
+<h5>Entered by: &nbsp;{{ note.author }} | {{ note.created }}</h5>
+<h5>Modified: &nbsp;{{ note.modified }}</h5>
+<br />
+<p>{{ note.body | markdown | safe }}</p>
 <br />
 
 <!--  -->

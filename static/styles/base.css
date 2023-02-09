@@ -1,0 +1,56 @@
+header {
+    height: 60px;
+    margin-bottom: 50px;
+}
+
+.navbar {
+    padding: 10px 0;
+}
+
+.navbar .container-fluid {
+    padding: 0 80px;
+}
+
+#offcanvasNavbar {
+    width: 200px;
+}
+
+.offcanvas-header button {
+    margin: auto;
+}
+
+.offcanvas-header button span {
+    color: #000;
+}
+
+.offcanvas-body ul {
+    text-align: right;
+}
+
+.nav-item a:hover {
+    color: black;
+}
+
+.card {
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.card-title a {
+    text-decoration: none;
+}
+
+.card-title a:hover {
+    color: blue;
+    font-weight: bold;
+}
+
+.card-text {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.card-text p {
+    margin: 0;
+}
