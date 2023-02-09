@@ -2,13 +2,12 @@
 <!--  -->
 {% block content %}
 <!--  -->
-{% for note in notes %}
-<h2><a href="{% url 'note-detail' note.pk %}">{{ note.title }}</a></h2>
+<h2>{{ note.title }}</h2>
 <h4>Entered by {{ note.author }} | {{ note.created }}</h4>
 <h4>Modified: {{ note.modified }}</h4>
 <br />
-<p>{{ note.body|slice:'150' }}</p>
+<p>{{ note.body }}</p>
 <br />
-{% endfor %}
+
 <!--  -->
 {% endblock content %}
