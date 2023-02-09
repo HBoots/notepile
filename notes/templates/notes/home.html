@@ -4,19 +4,23 @@
 <!--  -->
 {% block content %}
 <!--  -->
-{% for note in notes %}
-<div class="card">
-    <!-- <img src="..." class="card-img-top" alt="..." /> -->
-    <div class="card-body">
-        <h5 class="card-title">
-            <a href="{% url 'note-detail' note.pk %}">{{ note.title }}</a>
-        </h5>
-        <div class="card-text">{{ note.fragment | markdown | safe }}</div>
-        <!-- <a href="{% url 'note-detail' note.pk %}" class="btn btn-primary btn-sm"
+<div class="card-stack">
+    {% for note in notes %}
+    <div class="card">
+        <!-- <img src="..." class="card-img-top" alt="..." /> -->
+        <a href="{% url 'note-detail' note.pk %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ note.title }}</h5>
+                <div class="card-text">
+                    {{ note.fragment | markdown | safe }}
+                </div>
+                <!-- <a href="{% url 'note-detail' note.pk %}" class="btn btn-primary btn-sm"
             >Read</a
         > -->
+            </div>
+        </a>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
 <!--  -->
 {% endblock content %}

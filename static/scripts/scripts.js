@@ -1,10 +1,12 @@
 const items = document.querySelectorAll(".nav-item");
 
 items.forEach((item) => {
-    item.addEventListener("click", (e) => {
-        item.forEach((f) => {
-            f.classList.remove("active");
-        });
-        e.target.classList.add("active");
-    });
+    item.addEventListener("click", setActiveClass);
 });
+
+function setActiveClass(event) {
+    items.forEach((item) => {
+        item.classList.remove("active");
+    });
+    event.target.classList.add("active");
+}

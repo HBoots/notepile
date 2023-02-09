@@ -1,17 +1,26 @@
-<nav class="navbar bg-body-tertiary fixed-top">
+<nav class="navbar bg-body-tertiary navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-        <div class="">
+        <div class="topbar">
             <button
+                class="navbar-toggler topbar-links"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+            >
+                <span>TOPICS</span>
+            </button>
+            <!-- <button
                 class="navbar-toggler"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar"
             >
-                <!-- <span class="navbar-toggler-icon"></span> -->
+                <span class="navbar-toggler-icon"></span>
                 <span>TOPICS</span>
-            </button>
-            <!-- <span>Select a Topic</span> -->
+            </button> -->
+            <a class="topbar-links" href="{% url 'note-list' %}">Home</a>
         </div>
         <a class="navbar-brand" href="{% url 'note-list' %}">notepile</a>
         <div

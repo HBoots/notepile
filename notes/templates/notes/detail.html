@@ -4,13 +4,18 @@
 <!--  -->
 {% block content %}
 <!--  -->
-<h2>{{ note.title }}</h2>
-<br />
-<h5>Entered by: &nbsp;{{ note.author }} | {{ note.created }}</h5>
-<h5>Modified: &nbsp;{{ note.modified }}</h5>
-<br />
-<p>{{ note.body | markdown | safe }}</p>
-<br />
+<div class="detail">
+    <h2>{{ note.title }}</h2>
+    <br />
+    <div class="detail-dates">
+        <p>Entered by: &nbsp;{{ note.author }} | {{ note.created }}</p>
+        <p>Modified: &nbsp;{{ note.modified }}</p>
+        <hr />
+        <br />
+    </div>
+    <p>{{ note.body | markdown | safe }}</p>
+    <br />
+</div>
 
 <!--  -->
 {% endblock content %}

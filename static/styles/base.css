@@ -11,6 +11,34 @@ header {
     padding: 0 80px;
 }
 
+.topbar-links {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #999;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.topbar-links:hover {
+    color: #eee;
+}
+
+.navbar-toggler {
+    font-size: 1rem;
+    /* font-style: italic; */
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+}
+/* 
+.navbar-toggler:hover {
+    color: #eee;
+} */
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
 #offcanvasNavbar {
     width: 200px;
 }
@@ -27,30 +55,58 @@ header {
     text-align: right;
 }
 
-.nav-item a:hover {
+.nav-link {
+    color: #777;
+}
+
+.navbar-nav .nav-link.active {
     color: black;
 }
 
+.nav-link:hover {
+    color: black;
+}
+
+.card-stack {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card {
-    max-width: 400px;
+    height: 120px;
+    width: 400px;
     margin: auto;
     margin-bottom: 40px;
 }
 
-.card-title a {
+.card:hover {
+    background-color: #efefef;
+}
+
+.card a {
     text-decoration: none;
 }
 
-.card-title a:hover {
-    color: blue;
-    font-weight: bold;
+.card-title {
+    margin-bottom: 10px;
 }
 
 .card-text {
     font-style: italic;
     font-size: 14px;
+    padding-left: 20px;
 }
 
 .card-text p {
     margin: 0;
+}
+
+.detail {
+    max-width: 800px;
+    margin: auto;
+}
+
+.detail-dates p {
+    font-weight: 900;
+    margin-bottom: 5px;
 }
