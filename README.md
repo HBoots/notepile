@@ -20,13 +20,13 @@ Create a separate user developer account.
 ## Do
 
 -   change table styling
--   change fenced code styling (js library that adds syntax highlighting)
+-   fix active class on offcanvas list items
 -   create offcanas list items with db topic data
 -   database filter with new view for each topic ?
 -   enter the rest of dev_notes markdown
 -   read up on how converted markdown is sanitized.
     -   add separate santizer ?
--   Notes lists: change to grid instead of stacked? Have buttons that switch from one to the other?
+-   toggle button to switch from grid to stack
 
 ## Notes
 

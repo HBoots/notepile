@@ -20,9 +20,9 @@
                 <span class="navbar-toggler-icon"></span>
                 <span>TOPICS</span>
             </button> -->
-            <a class="topbar-links" href="{% url 'note-list' %}">Home</a>
+            <a class="topbar-links" href="{% url 'about' %}">About</a>
         </div>
-        <a class="navbar-brand" href="{% url 'note-list' %}">notepile</a>
+        <a class="navbar-brand" href="{% url 'list-all' %}">notepile</a>
         <div
             class="offcanvas offcanvas-start"
             tabindex="-1"
@@ -38,37 +38,18 @@
                 ></button>
             </div>
             <div class="offcanvas-body">
-                <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                    Go To Topic ...
-                </h5>
-                <br /> -->
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    {% for topic in topics %}
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#"
-                            >Django</a
+                        <a
+                            class="nav-link"
+                            aria-current="page"
+                            href="{% url 'topic-list' topic %}"
+                            >{{ topic }}</a
                         >
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Git</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Linux</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nginx</a>
-                    </li>
+                    {% endfor %}
                 </ul>
-                <!-- <form class="d-flex mt-3" role="search">
-                    <input
-                        class="form-control me-2"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search"
-                    />
-                    <button class="btn btn-outline-success" type="submit">
-                        Search
-                    </button>
-                </form> -->
             </div>
         </div>
     </div>
