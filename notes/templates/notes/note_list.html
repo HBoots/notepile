@@ -13,7 +13,7 @@
         {% for note in notes %}
         <div class="card">
             <!-- <img src="..." class="card-img-top" alt="..." /> -->
-            <a href="{% url 'note-detail' note.pk %}">
+            <a href="{{ note.get_absolute_url }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ note.title }}</h5>
                     <div class="card-text">

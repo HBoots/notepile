@@ -116,6 +116,14 @@ header {
     margin: 0;
 }
 
+/* MODIFIES RULE FROM PRISM.CSS */
+pre[class*="language-"] {
+    /* padding: 1em; */
+    margin: 1em 0;
+    /* overflow: auto; */
+    /* border-radius: 0.3em; */
+}
+
 .detail {
     max-width: 800px;
     margin: auto;

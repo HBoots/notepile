@@ -8,8 +8,8 @@
     <h2>{{ note.title }}</h2>
     <br />
     <div class="detail-dates">
-        <p>Entered by: &nbsp;{{ note.author }} | {{ note.created }}</p>
-        <p>Modified: &nbsp;{{ note.modified }}</p>
+        <p>Created by: {{ note.author }} | {{ note.created|date:"D d M Y"}}</p>
+        <p>Modified: {{ note.modified|date:"D d M Y" }}</p>
         <hr />
         <br />
     </div>
