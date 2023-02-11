@@ -5,6 +5,13 @@
 {% block content %}
 <!--  -->
 <div class="detail">
+    <div class="back-link">
+        <p>
+            <a href="{% url 'topic-list' note.topic %}"
+                >Back to {{ note.topic }}</a
+            >
+        </p>
+    </div>
     <h2>{{ note.title }}</h2>
     <br />
     <div class="detail-dates">
@@ -13,7 +20,9 @@
         <hr />
         <br />
     </div>
-    <p>{{ note.body | markdown | safe }}</p>
+    <div class="detail-body">
+        <p>{{ note.body | markdown | safe }}</p>
+    </div>
     <br />
 </div>
 
