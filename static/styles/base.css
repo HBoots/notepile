@@ -77,6 +77,11 @@ header {
     margin-bottom: 50px;
 }
 
+.content {
+    max-width: 100%;
+    margin: auto;
+}
+
 .text-content {
     max-width: 600px;
     margin: auto;
@@ -119,10 +124,11 @@ header {
 /* MODIFIES RULE FROM PRISM.CSS */
 pre[class*="language-"] {
     /* padding: 1em; */
-    margin: 1em 0;
+    margin: 1rem 0;
     /* overflow: auto; */
     /* border-radius: 0.3em; */
-    margin-left: 1em;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
 }
 
 .detail {
@@ -149,9 +155,19 @@ pre[class*="language-"] {
     margin-bottom: 5px;
 }
 
-.detail-body h4 {
-    font-style: italic;
+.detail-body h1,
+.detail-body h2,
+.detail-body h3,
+.detail-body h4,
+.detail-body h5,
+.detail-body h6 {
     margin-bottom: 2rem;
+}
+
+.detail-body h4,
+.detail-body h5,
+.detail-body h6 {
+    font-style: italic;
 }
 
 .detail-body p {

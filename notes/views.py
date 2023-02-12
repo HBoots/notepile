@@ -1,12 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template.response import TemplateResponse
-from .models import Note
+from django.urls import reverse
+from django.contrib.auth.models import User
+from .models import Note, File
+from .forms import UploadFileForm
+
 
 topic_list = []
 
 
 def about(request):
     topics = get_topics(topic_list)
+
+    print()
+    print(User.objects.get(username='Segundo'))
+    print()
 
     context = {
         'topics': topics,
@@ -54,6 +62,25 @@ def detail(request, pk):
     return TemplateResponse(request, 'notes/note_detail.html', context)
 
 
+def upload(request):
+    if request.method == "POST":
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        return redirect(reverse('list-all'))
+        # return redirect("notes:upload")
+
+    form = UploadFileForm(),
+    files = File.objects.all()
+
+    context = {
+        'form': form,
+        'files': files
+    }
+
+    return TemplateResponse(request, 'notes/upload.html', context)
+
+
 def get_topics(topic_list):
     if len(topic_list) == 0:
         query_list = Note.objects.all().values(
@@ -61,3 +88,55 @@ def get_topics(topic_list):
         return [k['topic'] for k in query_list]
 
     return topic_list
+
+
+# ################################################3
+
+single_dummy = {
+    'title': 'Mickey Mouse',
+    'body': '## mouse'
+}
+
+dummy = [
+    {
+        'title': 'Mickey Mouse',
+        'body': '## mouse'
+    },
+    {
+        'title': 'Mickey Mouse',
+        'body': '## mouse'
+    },
+]
+
+# create new model instance with new data
+# note_data = Model(title='data', body='data', ...)
+# note_data.save()
+
+# next ... get directory of markdown files
+# iterate through files
+#   add filename to model instance title
+#   add file content to model instance body
+#   save model instance
+
+# ADD NOTES DOCUMENTS IN JSON FORMAT TO THE SQLITE DATABASE
+# import json file
+# convert json to python array of dictionaries
+# iterate through array
+#   add dict data to model instance data
+#   save model instance
+
+
+def load_note_data(request):
+    new_data = Note(title=single_dummy['title'],
+                    body=single_dummy['body'],
+                    author=User.objects.get(username='Segundo'))
+    new_data.save()
+
+    context = {}
+
+    return TemplateResponse(request, 'notes/about.html', context)
+
+
+# QUESTIONS:
+# local file??
+# if djangois a web sit / api then upload file to it with a form.

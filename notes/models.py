@@ -21,3 +21,7 @@ class Note(models.Model):
 
     def get_absolute_url(self):
         return reverse('note-detail', args=[str(self.id)])
+
+
+class File(models.Model):
+    file = models.FileField(upload_to='json_files/')
