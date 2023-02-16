@@ -8,3 +8,24 @@ The site is intended to provide me with a quick reference from any location with
 #1 = 1 1 (1)
 
 #2 = 1 1 (1)
+
+---
+
+Feb 15, 2023 - Set project aside to finish other things.
+
+## To Do
+
+-   enter the Notes from the downloaded Mongo database file.
+-   create a means of uploading the file with the application
+-   ...or just copy paste the file locally...
+-   convert JSON to Python > Add Python dictionary items to the Sqlite database
+-   setup Postgres database for production
+-   launch app on Fly.io
+-   decide whether to include:
+    -   User accounts and authentication
+
+## To Study with Django
+
+-   creating User accounts and auth
+-   manipulating forms
+-   signals
