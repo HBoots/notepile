@@ -23,9 +23,49 @@ Feb 15, 2023 - Set project aside to finish other things.
 -   launch app on Fly.io
 -   decide whether to include:
     -   User accounts and authentication
+-   add `target="_blank"` attribute to `<a>` tags.
+-   review and streamline `base.css` style page. Remove unecessary rules.
+-   add functionality for a single note to have multiple topics
+    -   add a new field ?
 
 ## To Study with Django
 
 -   creating User accounts and auth
 -   manipulating forms
 -   signals
+
+## New Notes
+
+-   making API call with requests
+-   Python try except blocks
+-   change port for Django app (just add port after runserver)
+    -   or make a script ...
+
+```bash
+#!/bin/bash
+
+# create a bash script with the following:
+exec ./manage.py runserver 0.0.0.0:5000
+
+# save it as runserver in the same dir as manage.py
+chmod +x runserver
+
+# and run it as...
+./runserver
+```
+
+## NOTES TO ADD:
+
+-   list of most common status codes with link to wiki page
+-   python regex
+-   python \*args and \*\*kwargs
+-   python unpacking
+-   python comprehensions (including complex ones)
+-   python filter, map and lambdas
+-   python request library
+    -   list of response object methods
+-   python file handling / json in python
+-   python handling env variables in django
+-   bash scripting
+-   Nginx
+-   Linux networking

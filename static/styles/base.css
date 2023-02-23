@@ -1,3 +1,8 @@
+html,
+body {
+    font-size: 1.07rem;
+}
+
 header {
     height: 60px;
     margin-bottom: 50px;
@@ -151,7 +156,9 @@ pre[class*="language-"] {
 }
 
 .detail-dates p {
-    font-weight: 900;
+    font-style: italic;
+    font-size: 0.8rem;
+    /* font-weight: 900; */
     margin-bottom: 5px;
 }
 
@@ -172,4 +179,20 @@ pre[class*="language-"] {
 
 .detail-body p {
     padding-left: 1em;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    border: solid black 1px;
+}
+
+th {
+    background-color: #ddd;
+}
+
+th,
+td {
+    padding: 2px 5px;
+    border: solid #555 0.2px;
 }
