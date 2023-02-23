@@ -12,10 +12,6 @@ topic_list = []
 def about(request):
     topics = get_topics(topic_list)
 
-    print()
-    print(User.objects.get(username='Segundo'))
-    print()
-
     context = {
         'topics': topics,
     }
@@ -139,4 +135,4 @@ def load_note_data(request):
 
 # QUESTIONS:
 # local file??
-# if djangois a web sit / api then upload file to it with a form.
+# if django is a web sit / api then upload file to it with a form.
