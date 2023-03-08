@@ -129,10 +129,10 @@ header {
 /* MODIFIES RULE FROM PRISM.CSS */
 pre[class*="language-"] {
     /* padding: 1em; */
-    margin: 1rem 0;
+    margin: 1rem;
     /* overflow: auto; */
     /* border-radius: 0.3em; */
-    margin-left: 1rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -168,13 +168,19 @@ pre[class*="language-"] {
 .detail-body h4,
 .detail-body h5,
 .detail-body h6 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .detail-body h4,
 .detail-body h5,
 .detail-body h6 {
     font-style: italic;
+}
+
+.detail-body h5,
+.detail-body h6 {
+    color: rgb(3, 3, 145);
+    padding-left: 1em;
 }
 
 .detail-body p {
