@@ -2,48 +2,48 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="description" content="" />
-        <link rel="shortcut icon" href="/images/favicon.png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="/images/favicon.png" />
 
-        <link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}" />
-        <link rel="stylesheet" href="{% static 'styles/bootstrap_lux.css' %}" />
-        <link rel="stylesheet" href="{% static 'styles/prism.css' %}" />
-        <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/bootstrap_lux.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/prism.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
 
-        <title></title>
-    </head>
-    <body>
-        <header>
-            <!--  -->
-            {% include 'nav.html' %}
-            <!--  -->
-        </header>
-        <div class="container">
-            <!--  -->
-            {% block content %}
-            <!--  -->
-            {% endblock content %}
-            <!--  -->
-        </div>
-        <!--  -->
-        <script
-            type="text/javascript"
-            src="{% static 'scripts/bootstrap.js' %}"
-            defer
-        ></script>
-        <script
-            type="text/javascript"
-            src="{% static 'scripts/prism.js' %}"
-            defer
-        ></script>
-        <script
-            type="text/javascript"
-            src="{% static 'scripts/scripts.js' %}"
-            defer
-        ></script>
-    </body>
+    <title>notepile</title>
+  </head>
+  <body>
+    <header>
+      <!--  -->
+      {% include 'nav.html' %}
+      <!--  -->
+    </header>
+    <div class="container">
+      <!--  -->
+      {% block content %}
+      <!--  -->
+      {% endblock content %}
+      <!--  -->
+    </div>
+    <!--  -->
+    <script
+      type="text/javascript"
+      src="{% static 'scripts/bootstrap.js' %}"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'scripts/prism.js' %}"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'scripts/scripts.js' %}"
+      defer
+    ></script>
+  </body>
 </html>

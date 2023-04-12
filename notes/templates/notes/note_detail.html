@@ -5,25 +5,23 @@
 {% block content %}
 <!--  -->
 <div class="detail">
-    <div class="back-link">
-        <p>
-            <a href="{% url 'topic-list' note.topic %}"
-                >Back to {{ note.topic }}</a
-            >
-        </p>
-    </div>
-    <h2>{{ note.title }}</h2>
+  <div class="back-link">
+    <p>
+      <a href="{% url 'topic-list' note.topic %}">Back to {{ note.topic }}</a>
+    </p>
+  </div>
+  <h2>{{ note.title }}</h2>
+  <br />
+  <div class="detail-dates">
+    <p>Created by: {{ note.author }} | {{ note.created|date:"D d M Y" }}</p>
+    <p>Modified: {{ note.modified|date:"D d M Y" }}</p>
+    <hr />
     <br />
-    <div class="detail-dates">
-        <p>Created by: {{ note.author }} | {{ note.created|date:"D d M Y"}}</p>
-        <p>Modified: {{ note.modified|date:"D d M Y" }}</p>
-        <hr />
-        <br />
-    </div>
-    <div class="detail-body">
-        <p>{{ note.body | markdown | safe }}</p>
-    </div>
-    <br />
+  </div>
+  <div class="detail-body">
+    <p>{{ note.body | markdown | safe }}</p>
+  </div>
+  <br />
 </div>
 
 <!--  -->

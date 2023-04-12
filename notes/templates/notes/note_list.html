@@ -5,25 +5,22 @@
 {% block content %}
 <!--  -->
 <div class="content">
-    <div class="page-title">
-        <h2>{{ topic }} Notes</h2>
-        <p><em>{{ subtitle }}</em></p>
-    </div>
-    <div class="card-stack">
-        {% for note in notes %}
-        <div class="card">
-            <!-- <img src="..." class="card-img-top" alt="..." /> -->
-            <a href="{{ note.get_absolute_url }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ note.title }}</h5>
-                    <div class="card-text">
-                        {{ note.fragment | markdown | safe }}
-                    </div>
-                </div>
-            </a>
+  <div class="page-title">
+    <h2>{{ topic }} Notes</h2>
+    <p><em>{{ subtitle }}</em></p>
+  </div>
+  <div class="card-stack">
+    {% for note in notes %}
+    <div class="card">
+      <a href="{{ note.get_absolute_url }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ note.title }}</h5>
+          <div class="card-text">{{ note.fragment | markdown | safe }}</div>
         </div>
-        {% endfor %}
+      </a>
     </div>
+    {% endfor %}
+  </div>
 </div>
 <!--  -->
 {% endblock content %}

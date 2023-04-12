@@ -13,17 +13,23 @@ The site is intended to provide me with a quick reference from any location with
 
 Feb 15, 2023 - Set project aside to finish other things.
 
+## Admin and Editor
+
+- disable VSCode formatting on django templates
+- or... enable django template specific formatting
+- assign current logged in user as author / modifier of note
+
 ## To Do
 
--   enter the Notes from the downloaded Mongo database file.
--   create a means of uploading the file with the application
--   ...or just copy paste the file locally...
--   convert JSON to Python > Add Python dictionary items to the Sqlite database
--   setup Postgres database for production
--   launch app on Fly.io
--   decide whether to include:
-    -   User accounts and authentication
--   add `target="_blank"` attribute to `<a>` tags.
--   review and streamline `base.css` style page. Remove unecessary rules.
--   add functionality for a single note to have multiple topics
-    -   add a new field ?
+- enter the Notes from the downloaded Mongo database file.
+- create a means of uploading the file with the application
+- ...or just copy paste the file locally...
+- convert JSON to Python > Add Python dictionary items to the Sqlite database
+- setup Postgres database for production
+- launch app on Fly.io
+- decide whether to include:
+  - User accounts and authentication
+- add `target="_blank"` attribute to `<a>` tags.
+- review and streamline `base.css` style page. Remove unecessary rules.
+- add functionality for a single note to have multiple topics
+  - add a new field ?
