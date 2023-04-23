@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from django.template.response import TemplateResponse
 from django.urls import reverse
 from django.contrib.auth.models import User
-from .models import Note, File
-from .forms import UploadFileForm
+from ..models import Note, File
+from ..forms import UploadFileForm
 
 
 topic_list = []
@@ -87,22 +87,6 @@ def get_topics(topic_list):
 
 
 # ################################################3
-
-single_dummy = {
-    'title': 'Mickey Mouse',
-    'body': '## mouse'
-}
-
-dummy = [
-    {
-        'title': 'Mickey Mouse',
-        'body': '## mouse'
-    },
-    {
-        'title': 'Mickey Mouse',
-        'body': '## mouse'
-    },
-]
 
 # create new model instance with new data
 # note_data = Model(title='data', body='data', ...)

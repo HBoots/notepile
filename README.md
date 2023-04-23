@@ -15,9 +15,11 @@ Feb 15, 2023 - Set project aside to finish other things.
 
 ## Admin and Editor
 
-- disable VSCode formatting on django templates
-- or... enable django template specific formatting
 - assign current logged in user as author / modifier of note
+
+#### Done...
+
+- enable Django VSCode extension to support formatting of Django templates.
 
 ## To Do
 
