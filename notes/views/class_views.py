@@ -7,6 +7,9 @@ class TopicListview(ListView):
     template_name = "note_list.html"
 
     def get_queryset(self):
+        print()
+        print(self.kwargs)
+        print()
         self.topic = self.kwargs["topic"]
         self.topics = self.get_topics()
         self.notes = Note.objects.filter(topic=self.topic)
@@ -23,3 +26,6 @@ class TopicListview(ListView):
         topics = Note.objects.all().values(
             'topic').distinct().order_by('topic')
         return [k['topic'] for k in topics]
+
+    def get_absolute_url(self):
+        pass
